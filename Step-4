@@ -1,0 +1,6 @@
+sudo kubeadm config images pull --cri-socket=unix:///var/run/cri-dockerd.sock
+
+sudo kubeadm init --pod-network-cidr=192.168.0.0/22 --cri-socket=unix:///var/run/cri-dockerd.sock
+
+# Make sure that kubelet services is running 
+# Make sure that kubectl get nodes command is available
