@@ -1,0 +1,36 @@
+# Remove Kubernetes
+systemctl stop kubelet
+
+sudo apt-get remove -y kubelet kubeadm kubectl
+
+sudo rm -rf ~/.kube
+sudo rm -rf /etc/kubernetes
+sudo rm -rf /etc/yum.repos.d/kubernetes.repo
+sudo rm -rf /var/lib/etcd/
+sudo rm -rf /var/lib/kubelet
+sudo rm -rf /etc/kubernetes
+sudo rm -rf /etc/apt/sources.list.d/kubernetes*
+sudo rm -rf /etc/cni
+sudo rm -rf /bin/kube*
+sudo rm -rf /bin/docker*
+sudo rm -rf /bin/containerd
+sudo rm -rf /opt/cni
+sudo rm -rf /opt/containerd
+sudo rm -rf /usr/bin/docker*
+sudo rm -rf /usr/bin/kubernetes*
+sudo rm -rf /usr/bin/containerd*
+
+# Remove Docker 
+systemctl stop docker 
+systemctl stop cri-dockerd
+systemctl stop containerd
+
+sudo apt-get remove -y docker cri-dockerd containerd 
+
+sudo rm -rf /etc/apt/keyrings/docker.gpg
+sudo rm -rf /etc/apt/sources.list.d/docker.list
+sudo rm -rf /etc/docker
+sudo rm -rf /etc/containerd
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+sudo rm -rf /var/lib/cni
