@@ -1,5 +1,5 @@
 # Reference Link: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
-cd /home
+#cd /home
 sudo swapoff -a
 
 rm -rf /etc/apt/keyrings/kubernetes-archive-keyring.gpg
