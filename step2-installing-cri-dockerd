@@ -1,5 +1,7 @@
 # Reference Link: https://github.com/Mirantis/cri-dockerd
 
+sudo apt install golang-go -y
+
 git clone https://github.com/Mirantis/cri-dockerd.git
 
 cd cri-dockerd
