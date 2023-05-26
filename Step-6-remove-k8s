@@ -10,6 +10,8 @@ sudo rm -rf /var/lib/etcd/
 sudo rm -rf /var/lib/kubelet
 sudo rm -rf /etc/kubernetes
 sudo rm -rf /etc/apt/sources.list.d/kubernetes*
+sudo rm -rf /etc/apt/keyrings/kubernetes*
+sudo rm -rf /usr/share/keyrings/kubernetes*
 sudo rm -rf /etc/cni
 sudo rm -rf /bin/kube*
 sudo rm -rf /bin/docker*
@@ -27,6 +29,7 @@ systemctl stop containerd
 
 sudo apt-get remove -y docker cri-dockerd containerd 
 
+sudo rm -rf /usr/share/keyrings/docker.gpg
 sudo rm -rf /etc/apt/keyrings/docker.gpg
 sudo rm -rf /etc/apt/sources.list.d/docker.list
 sudo rm -rf /etc/docker
