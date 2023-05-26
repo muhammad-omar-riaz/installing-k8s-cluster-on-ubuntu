@@ -4,7 +4,7 @@
 # Remove libraries & files
 rm -rf /etc/apt/keyrings/docker.gpg
 rm -rf /etc/apt/sources.list.d/docker.list
-
+rm -rf /usr/share/keyrings/docker.gpg
 
 # Uninstall old versions
 sudo apt-get remove docker docker-engine docker.io containerd runc
