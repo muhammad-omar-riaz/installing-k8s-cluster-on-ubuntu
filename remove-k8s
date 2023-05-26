@@ -1,7 +1,10 @@
-# Remove Kubernetes
 systemctl stop kubelet
+systemctl stop docker 
+systemctl stop cri-dockerd
+systemctl stop containerd
 
 sudo apt-get remove -y kubelet kubeadm kubectl
+sudo apt-get remove -y docker cri-dockerd containerd
 
 sudo rm -rf ~/.kube
 sudo rm -rf /etc/kubernetes
@@ -21,14 +24,6 @@ sudo rm -rf /opt/containerd
 sudo rm -rf /usr/bin/docker*
 sudo rm -rf /usr/bin/kubernetes*
 sudo rm -rf /usr/bin/containerd*
-
-# Remove Docker 
-systemctl stop docker 
-systemctl stop cri-dockerd
-systemctl stop containerd
-
-sudo apt-get remove -y docker cri-dockerd containerd 
-
 sudo rm -rf /usr/share/keyrings/docker.gpg
 sudo rm -rf /etc/apt/keyrings/docker.gpg
 sudo rm -rf /etc/apt/sources.list.d/docker.list
